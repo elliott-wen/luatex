@@ -18,7 +18,7 @@
    You should have received a copy of the GNU General Public License along
    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
 
-/* $Id$ */
+/* $Id: ptexlib.h 4597 2013-03-19 15:10:44Z taco $ */
 
 #ifndef PTEXLIB_H
 #  define PTEXLIB_H

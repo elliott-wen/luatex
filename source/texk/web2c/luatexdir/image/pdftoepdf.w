@@ -20,8 +20,8 @@
 
 @ @c
 static const char _svn_version[] =
-    "$Id$"
-    "$URL$";
+    "$Id: pdftoepdf.w 4479 2012-11-07 16:38:55Z taco $"
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/image/pdftoepdf.w $";
 
 // define DEBUG
 #define __STDC_FORMAT_MACROS /* for PRId64 etc.  */

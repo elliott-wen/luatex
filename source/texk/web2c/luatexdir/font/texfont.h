@@ -17,7 +17,7 @@
    You should have received a copy of the GNU General Public License along
    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
 
-/* $Id$ */
+/* $Id: texfont.h 4576 2013-02-08 20:42:57Z hhenkel $ */
 
 /* Here we have the interface to LuaTeX's font system, as seen from the
    main pascal program. There is a companion list in luatex.defines to

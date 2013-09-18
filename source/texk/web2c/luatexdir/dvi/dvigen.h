@@ -17,7 +17,7 @@
    You should have received a copy of the GNU General Public License along
    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
 
-/* $Id$ */
+/* $Id: dvigen.h 4576 2013-02-08 20:42:57Z hhenkel $ */
 
 #ifndef DVIGEN_H
 #  define DVIGEN_H

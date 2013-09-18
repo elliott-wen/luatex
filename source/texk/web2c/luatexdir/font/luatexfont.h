@@ -17,7 +17,7 @@
    You should have received a copy of the GNU General Public License along
    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
 
-/* $Id$ */
+/* $Id: luatexfont.h 4341 2011-07-28 21:24:31Z hhenkel $ */
 
 #ifndef LUATEXFONT_H
 #  define LUATEXFONT_H

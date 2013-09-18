@@ -33,8 +33,8 @@
 #include "lib/lib.h"            /* web2c's lib, for recorder_record_input */
 
 static const char _svn_version[] =
-    "$Id$ "
-    "$URL$";
+    "$Id: luafflib.c 4640 2013-08-13 08:46:43Z taco $ "
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/luafontloader/src/luafflib.c $";
 
 extern char **gww_errors;
 extern int gww_error_count;

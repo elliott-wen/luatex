@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# $Id$
+# $Id: build.sh 4633 2013-04-10 18:24:57Z khaled $
 #
 # Copyright (c) 2005-2011 Martin Schröder <martin@luatex.org>
 # Copyright (c) 2009-2011 Taco Hoekwater <taco@luatex.org>

@@ -15,8 +15,8 @@
 #include "luatex_svnversion.h"
 
 static const char _svn_version[] =
-    "$Id$ "
-    "$URL$";
+    "$Id: luatex.c 4607 2013-03-21 15:08:45Z taco $ "
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/luatex.c $";
 
 #define TeX
 

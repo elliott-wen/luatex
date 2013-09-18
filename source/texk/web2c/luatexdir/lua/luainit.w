@@ -19,8 +19,8 @@
 
 @ @c
 static const char _svn_version[] =
-    "$Id$"
-    "$URL$";
+    "$Id: luainit.w 4638 2013-06-14 07:44:16Z taco $"
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/lua/luainit.w $";
 
 #include <kpathsea/c-stat.h>
 

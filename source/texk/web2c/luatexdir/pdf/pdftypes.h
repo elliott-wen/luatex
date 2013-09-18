@@ -17,7 +17,7 @@
    You should have received a copy of the GNU General Public License along
    with LuaTeX; if not, see <http://www.gnu.org/licenses/>. */
 
-/* $Id$ */
+/* $Id: pdftypes.h 4558 2013-01-19 14:21:59Z oneiros $ */
 
 #ifndef PDFTYPES_H
 #  define PDFTYPES_H

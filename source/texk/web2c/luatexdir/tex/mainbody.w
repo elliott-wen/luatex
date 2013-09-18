@@ -23,8 +23,8 @@
 
 @ @c
 static const char _svn_version[] =
-    "$Id$"
-    "$URL$";
+    "$Id: mainbody.w 4635 2013-04-21 14:54:12Z oneiros $"
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/tex/mainbody.w $";
 
 #include "ptexlib.h"
 

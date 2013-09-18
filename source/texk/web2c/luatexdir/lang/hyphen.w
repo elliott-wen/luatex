@@ -39,8 +39,8 @@
 
 @ @c
 static const char _svn_version[] =
-    "$Id$ "
-    "$URL$";
+    "$Id: hyphen.w 4599 2013-03-19 15:41:07Z taco $ "
+    "$URL: https://foundry.supelec.fr/svn/luatex/trunk/source/texk/web2c/luatexdir/lang/hyphen.w $";
 
 #include <stdlib.h>             /* for NULL, malloc */
 #include <stdio.h>              /* for fprintf */
