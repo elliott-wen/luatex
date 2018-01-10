@@ -88,8 +88,8 @@ until [ -z "$1" ]; do
     --nojit     ) BUILDJIT=FALSE     ;;
     --make      ) ONLY_MAKE=TRUE     ;;
     --nostrip   ) STRIP_LUATEX=FALSE ;;
-    --debugopt  ) STRIP_LUATEX=FALSE; WARNINGS=max ; CFLAGS="-O3 -g -g3 $CFLAGS" ; CXXFLAGS="-O3 -g -g3 $CXXFLAGS"  ;;
-    --debug     ) STRIP_LUATEX=FALSE; WARNINGS=max ; CFLAGS="-O0 -g -g3 $CFLAGS" ; CXXFLAGS="-O0 -g -g3 $CXXFLAGS"  ;;
+    --debugopt  ) STRIP_LUATEX=FALSE; WARNINGS=max ; CFLAGS="-O3 -g -ggdb3 $CFLAGS" ; CXXFLAGS="-O3 -g -ggdb $CXXFLAGS"  ;;
+    --debug     ) STRIP_LUATEX=FALSE; WARNINGS=max ; CFLAGS="-O0 -g -ggdb3 $CFLAGS" ; CXXFLAGS="-O0 -g -ggdb $CXXFLAGS"  ;;
     --clang     ) export CC=clang; export CXX=clang++ ; TARGET_CC=$CC ; CLANG=TRUE ;;
     --warnings=*) WARNINGS=`echo $1 | sed 's/--warnings=\(.*\)/\1/' `        ;;
     --mingw     ) MINGWCROSS=TRUE    ;;
@@ -108,10 +108,12 @@ done
 STRIP=strip
 LUATEXEXEJIT=luajittex
 LUATEXEXE=luatex
+LUATEXEXE53=luatex53
+
 
 case `uname` in
-  MINGW32*   ) LUATEXEXEJIT=luajittex.exe ; LUATEXEXE=luatex.exe ;;
-  CYGWIN*    ) LUATEXEXEJIT=luajittex.exe ; LUATEXEXE=luatex.exe ;;
+  MINGW32*   ) LUATEXEXEJIT=luajittex.exe ; LUATEXEXE=luatex.exe ; LUATEXEXE53=luatex53.exe ;;
+  CYGWIN*    ) LUATEXEXEJIT=luajittex.exe ; LUATEXEXE=luatex.exe ; LUATEXEXE53=luatex53.exe ;;
   Darwin     ) STRIP="strip -u -r" ;;
 esac
 
@@ -136,6 +138,7 @@ then
   B=build-windows64
   LUATEXEXEJIT=luajittex.exe
   LUATEXEXE=luatex.exe
+  LUATEXEXE53=luatex53.exe
   OLDPATH=$PATH
   PATH=/usr/mingw32/bin:$PATH
   PATH=`pwd`/extrabin/mingw:$PATH
@@ -154,6 +157,7 @@ then
   B=build-windows
   LUATEXEXEJIT=luajittex.exe
   LUATEXEXE=luatex.exe
+  LUATEXEXE53=luatex53.exe
   OLDPATH=$PATH
   PATH=/usr/mingw32/bin:$PATH
   PATH=`pwd`/extrabin/mingw:$PATH
@@ -257,7 +261,7 @@ TL_MAKE=$MAKE ../source/configure  $CONFHOST $CONFBUILD  $WARNINGFLAGS\
     --enable-coremp  \
     --enable-web2c  \
     --enable-dctdecoder=libjpeg --enable-libopenjpeg=openjpeg2 \
-    --enable-luatex $JITENABLE \
+    --enable-luatex53 --enable-luatex $JITENABLE \
     --without-system-cairo  \
     --without-system-pixman \
     --without-system-ptexenc \
@@ -298,7 +302,7 @@ then
   (cd texk/web2c; $MAKE $LUATEXEXEJIT)
 fi
 (cd texk/web2c; $MAKE $LUATEXEXE )
-
+(cd texk/web2c; $MAKE $LUATEXEXE53 )
 
 # go back
 cd ..
@@ -310,6 +314,7 @@ then
   $STRIP "$B"/texk/web2c/$LUATEXEXEJIT
 fi
   $STRIP "$B"/texk/web2c/$LUATEXEXE
+  $STRIP "$B"/texk/web2c/$LUATEXEXE53
 else
   echo "lua(jit)tex binary not stripped"
 fi
@@ -325,3 +330,4 @@ then
 ls -l "$B"/texk/web2c/$LUATEXEXEJIT
 fi
 ls -l "$B"/texk/web2c/$LUATEXEXE
+ls -l "$B"/texk/web2c/$LUATEXEXE53
